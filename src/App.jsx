@@ -13,8 +13,8 @@ import Order from './pages/Blank/order';
 import Kategori from './pages/Kategori/kategori';
 import Produk from './pages/Produk/produk';
 import Layananproduk from './pages/layananproduk/layanan_produk';
-import Playlist from './pages/playlist/playlist';
-import Pembayaran from './pages/Pembayaran';
+import Pembayaran from './pages/Topup';
+import Mobilelegends from './pages/Topup';
 
 function App() {
   return (
@@ -42,6 +42,11 @@ function App() {
         />
         <Route
           exact
+          path='/Topup/mobile-legends'
+          element={<PrivateRoute component={<Mobilelegends />} />}
+        />
+        <Route
+          exact
           path='/orders'
           element={<PrivateRoute component={<Order />} />}
         />
@@ -60,11 +65,6 @@ function App() {
           exact
           path='/layananproduk'
           element={<PrivateRoute component={<Layananproduk />} />}
-        />
-        <Route
-          exact
-          path='/playlist'
-          element={<PrivateRoute component={<Playlist />} />}
         />
         <Route
           exact

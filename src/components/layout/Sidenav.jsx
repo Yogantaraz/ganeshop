@@ -85,17 +85,6 @@ function Sidenav({ color, isMobile, toggleSidenav, sidenavVisible }) {
       ),
     },
     {
-      key: "/playlist",
-      label: (
-        <NavLink to="/playlist">
-          <span className="icon">
-            <SoundOutlined />
-          </span>
-          <span className="label">Playlist</span>
-        </NavLink>
-      ),
-    },
-    {
       key: "/profile",
       label: (
         <NavLink to="/profile">
@@ -128,6 +117,7 @@ function Sidenav({ color, isMobile, toggleSidenav, sidenavVisible }) {
       style={{
         padding: 0,
         overflow: "hidden",
+        background: "#051c82",
       }}
       width={isMobile ? "80%" : "20%"}
     >

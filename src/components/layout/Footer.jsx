@@ -10,27 +10,27 @@
   * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-import { Layout, Row, Col } from 'antd';
+import { Layout, Row, Col, Typography } from 'antd';
 import { HeartFilled } from '@ant-design/icons';
 
 function Footer() {
   const { Footer: AntFooter } = Layout;
+  const { Text } = Typography;
 
   return (
-    <AntFooter style={{ background: '#fafafa' }}>
-      <Row className="" style={{ justifyContent: 'center' }}>
-        <Col xs={24} md={12} lg={12}>
-          <div className="copyright">
-            © 2024, by
-            <a href="#pablo" className="font-weight-bold" target="_blank">
-              Ganeshop.com
-            </a>
-            Cepat, Aman, Top Up Sekarang!
-          </div>
-        </Col>
-      </Row>
+    <AntFooter style={{ background: '#FFD700' }}>
+      {/* Informasi Tambahan */}
+      <div style={{ marginTop: "40px", textAlign: "center", backgroundColor: "#FFD700", padding: "10px" }}>
+        <Text strong style={{ color: "#fafafa" }}>More Information!</Text>
+        <div>
+          <Text>Instagram: @E-MORP</Text> <br />
+          <Text>Phone: 085173321510</Text> <br />
+          <Text>Email: EMORP-SHOP@gmail.com</Text>
+        </div>
+      </div>
     </AntFooter>
   );
 }
 
 export default Footer;
+

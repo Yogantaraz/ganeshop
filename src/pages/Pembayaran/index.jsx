@@ -61,14 +61,6 @@ const Pembayaran = () => {
           </Card>
         </Col>
       </Row>
-      <div style={{ marginTop: "40px", textAlign: "center", backgroundColor: "#FFD700", padding: "10px" }}>
-        <Text strong style={{ color: "#000" }}>More Information!</Text>
-        <div>
-          <Text>Instagram: @Ganeshop</Text> <br />
-          <Text>Phone: 085173321510</Text> <br />
-          <Text>Email: Layanan Pengaduan</Text>
-        </div>
-      </div>
     </div>
   );
 };

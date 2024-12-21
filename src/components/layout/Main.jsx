@@ -24,42 +24,44 @@ function MainLayout({ children }) {
   }, []);
 
   return (
-    <Layout style={{ minHeight: "100vh" }}>
-      {/* Sidenav */}
-      <Sidenav
-        isMobile={isMobile}
-        sidenavVisible={sidenavVisible}
-        toggleSidenav={toggleSidenav}
+    <Layout style={{ minHeight: "100vh", background: "#051c82" }}> {/* Ganti dengan warna yang diinginkan */}
+    {/* Sidenav */}
+    <Sidenav
+      isMobile={isMobile}
+      sidenavVisible={sidenavVisible}
+      toggleSidenav={toggleSidenav}
+    />
+  
+    {/* Header */}
+    <AntHeader
+      style={{
+        background: "black",
+        padding: "0 16px",
+        position: "fixed",
+        width: "100%",
+        zIndex: 10,
+        display: "flex",
+        alignItems: "center",
+        opacity: "90%",
+      }}
+    >
+      <Button
+        icon={<MenuOutlined />}
+        onClick={toggleSidenav}
+        style={{ marginRight: "16px" }}
       />
-
-      {/* Header */}
-      <AntHeader
-        style={{
-          background: "#fff",
-          padding: "0 16px",
-          position: "fixed",
-          width: "100%",
-          zIndex: 10,
-          display: "flex",
-          alignItems: "center",
-        }}
-      >
-        <Button
-          icon={<MenuOutlined />}
-          onClick={toggleSidenav}
-          style={{ marginRight: "16px" }}
-        />
-        <Header />
-      </AntHeader>
-
-      {/* Main Content */}
-      <Layout style={{ marginTop: 64 }}>
-        <Content style={{ padding: "16px" }}>{children}</Content>
-      </Layout>
-
-      {/* Footer */}
-      <Footer />
+      <Header />
+    </AntHeader>
+  
+    {/* Main Content */}
+    <Layout style={{ marginTop: 50, background: "#051c82" }}> {/* Tambahkan background */}
+      <Content style={{ padding: "16px" }}>{children}</Content>
     </Layout>
+  
+    {/* Footer */}
+    <Footer />
+  </Layout>
+  
   );
 }
 
